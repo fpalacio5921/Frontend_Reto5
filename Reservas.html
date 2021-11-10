@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Front Final</title>
+<meta charset="utf-8">
+<meta name="description" content="Este es un documento HTML5">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link rel="stylesheet" href="Mis_Estilos.css">
+<script type="text/javascript" src="Archivos_JavaScript/Java_script_Reservas.js"></script>  
+</head>
+
+<body>
+    <header id="cabecerareto5">
+    <div>
+    <h1><center>Reservaciones</center></h1>
+    </div>
+    </header>
+    <nav id="menuprincipal">
+    <div>
+    <ul>
+    <li><a href="index.html">Principal</a></li>
+    <li><a href="Reportes.html">Reportes</a></li>
+    <li><a href="Categorias.html">Categorias</a></li>
+    <li><a href="Clientes.html">Clientes</a></li>
+    <li><a href="Mensajes.html">Mensajes</a></li>
+    <li><a href="Reservas.html">Reservaciones</a></li>
+    <li><a href="Barcos.html">Barcos</a></li>
+    </ul>
+    </div>
+    </nav>
+    <div id="resultado10"></div>
+    <button onclick="listarReservation()">Consultar Reservas</button>
+    <script type="text/javascript"></script>
+ <div>
+<label> .....Escoja la Fecha Inicio de la Reservacion</label>
+<input class="controlReservation" type="date" id="startDate" placeholder="startDate"><br>
+<label>Escoja Fecha Devolucion de la Reservacion</label>
+<input class="controlReservation" type="date" id="devolutionDate" placeholder="devolutionDate"><br>
+<label>Estado de la Reservacion "completed / cancelled"</label>
+<input class="controlReservation" type="text" id="status" placeholder="escriba completed o cancelled"> <br>
+</div>
+<select id="select-client"></select>
+    <script type="text/javascript">
+        window.onload = autoInicioRelacionCliente();
+    </script>
+        <select id="select-boat"></select>
+        <script type="text/javascript">
+            window.onload = autoInicioBoat();
+        </script>
+ <button onclick=" agregarReservation()">Guardar Reservas</button>
+ </body>
+</html>
